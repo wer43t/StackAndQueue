@@ -5,10 +5,6 @@ namespace Salavat.Queue
     class MyQueue
     {
         DynamicArray arr = new DynamicArray(10);
-        private int GetArrPointer(arr.numbers)
-        {
-
-        }
 
         public void Push(int n)
         {
