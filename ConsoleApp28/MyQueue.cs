@@ -1,18 +1,31 @@
 ﻿using ConsoleApp3;
+using System;
 
 namespace Salavat.Queue
 {
     class MyQueue
     {
-        DynamicArray arr = new DynamicArray(10);
+        public DynamicArray arr = new DynamicArray(1);
+        private int GetArrPointer()
+        {
+            for (int i = 0; i < arr.numbers.Length; i++)
+            {
+                if (arr.numbers[i] != 0)
+                {
+                    return i;
+                }
+            }
+            return 0;
+        }
 
         public void Push(int n)
         {
             arr.PushBack(n);
         }
 
-        public int Pop(int arrPointer)
+        public int Pop()
         {
+            int arrPointer = GetArrPointer();
             return arr.Pop(arrPointer);
         }
 

@@ -34,16 +34,18 @@ namespace ConsoleApp3
             MyQueue free = new MyQueue();
             free.Push(220);
             free.Push(220);
-            free.Pop(0);
+            free.Push(300);
+            free.Pop();
             free.PrintMyQueue();
 
-            Console.WriteLine(free.Pop(0));
+            Console.WriteLine(free.Pop());
         }
     }
 
     public class DynamicArray
     {
-        public int[] numbers { get; set; }
+        public int[] numbers { get; private set; }
+
 
         public DynamicArray(int n)
         {
